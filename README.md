@@ -1,3 +1,7 @@
+> **Note on Ownership / Handover**
+> This project was originally created and developed by @bbb69543(https://github.com/bbb69543/million). 
+> It has been transferred/deployed to this account for ongoing company maintenance and operations.
+
 The website only for Million convenience store to verify accounting records.
 
 # React + Vite
