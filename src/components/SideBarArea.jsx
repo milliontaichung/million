@@ -29,7 +29,7 @@ function SideBarArea(props) {
       </Typography>
       <Box sx={{ width: "80%", marginBottom: 1, mx: "auto" }}>
         <img
-          src="/images/homeImg.jpg"
+          src={`${import.meta.env.BASE_URL}images/homeImg.jpg`}
           alt="Sidebar Illustration"
           className="sidebar-img"
         />
