@@ -10,6 +10,7 @@ import TaxExportBtn from "../components/TaxExportBtn";
 import ScrollToTopBtn from "../components/ScrollToTopBtn";
 
 function TaxConversionPage() {
+    const baseUrl = import.meta.env.BASE_URL;
     const navigate = useNavigate();
     const [content, setContent] = useState(null);
     const [files, setFile] = useState([null]); // Only 1 file needed
@@ -59,7 +60,7 @@ function TaxConversionPage() {
                 intro={
                     <div className="scroll-container" id="tax-instruction-container">
                         <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 2 }}>
-                            <a href="/報稅進項發票(模板).ods" download="報稅進項發票(模板).ods">
+                            <a href={`${baseUrl}報稅進項發票(模板).ods`} download="報稅進項發票(模板).ods">
                                 <Button variant="outlined" startIcon={<DownloadIcon />}>
                                     下載填寫資料用模板(.ods)
                                 </Button>
@@ -79,10 +80,10 @@ function TaxConversionPage() {
                                         </div>
                                         <div className="img-row">
                                             <div className="imgContainer auto">
-                                                <img src="images/tax_step_1.png" alt="Select shop name" className="img-h150" />
+                                                <img src={`${baseUrl}images/tax_step_1.png`} alt="Select shop name" className="img-h150" />
                                             </div>
                                             <div className="imgContainer crop-291">
-                                                <img src="images/tax_step_2.png" alt="Auto-filled tax info" className="img-h150" />
+                                                <img src={`${baseUrl}images/tax_step_2.png`} alt="Auto-filled tax info" className="img-h150" />
                                             </div>
                                         </div>
                                         <div className="step-note">
@@ -90,10 +91,10 @@ function TaxConversionPage() {
                                         </div>
                                         <div className="img-row">
                                             <div className="imgContainer auto">
-                                                <img src="images/tax_step_2_add_1.png" alt="Add tax info tab" className="img-h150" />
+                                                <img src={`${baseUrl}images/tax_step_2_add_1.png`} alt="Add tax info tab" className="img-h150" />
                                             </div>
                                             <div className="imgContainer auto">
-                                                <img src="images/tax_step_2_add_2.png" alt="Add tax info data" className="img-h150" />
+                                                <img src={`${baseUrl}images/tax_step_2_add_2.png`} alt="Add tax info data" className="img-h150" />
                                             </div>
                                         </div>
                                     </li>
@@ -102,7 +103,7 @@ function TaxConversionPage() {
                                             <b>不可跳行輸入</b>。若「營業稅額」不為「銷售金額」的5%(四捨五入)，稅額會出現紅底提示。
                                         </div>
                                         <div className="imgContainer auto-mt">
-                                            <img src="images/tax_step_2_item_2.png" alt="Tax calculation warning" className="img-responsive" />
+                                            <img src={`${baseUrl}images/tax_step_2_item_2.png`} alt="Tax calculation warning" className="img-responsive" />
                                         </div>
                                     </li>
                                     <li><b>(3)右側灰底欄位可協助核對稅額及統編</b>
@@ -110,7 +111,7 @@ function TaxConversionPage() {
                                             「未稅核對」欄位的數值為「銷售金額」*0.05，「廠商」欄位會依據「銷售人統編」欄位，至「統編資料」分頁抓取廠商名稱。
                                         </div>
                                         <div className="imgContainer auto-mt">
-                                            <img src="images/tax_step_3_check.png" alt="Tax verification check" className="img-responsive" />
+                                            <img src={`${baseUrl}images/tax_step_3_check.png`} alt="Tax verification check" className="img-responsive" />
                                         </div>
                                     </li>
                                     <li><b>(4)若無廠商資料，可至「統編資料」分頁新增。</b>
@@ -119,13 +120,13 @@ function TaxConversionPage() {
                                         </div>
                                         <div className="img-row">
                                             <div className="imgContainer auto">
-                                                <img src="images/tax_step_4_1.png" alt="Tax step 4 - 1" className="img-h150" />
+                                                <img src={`${baseUrl}images/tax_step_4_1.png`} alt="Tax step 4 - 1" className="img-h150" />
                                             </div>
                                             <div className="imgContainer auto">
-                                                <img src="images/tax_step_4_2.png" alt="Tax step 4 - 2" className="img-h150" />
+                                                <img src={`${baseUrl}images/tax_step_4_2.png`} alt="Tax step 4 - 2" className="img-h150" />
                                             </div>
                                             <div className="imgContainer auto">
-                                                <img src="images/tax_step_4_3.png" alt="Tax step 4 - 3" className="img-h150" />
+                                                <img src={`${baseUrl}images/tax_step_4_3.png`} alt="Tax step 4 - 3" className="img-h150" />
                                             </div>
                                         </div>
                                     </li>
@@ -135,13 +136,13 @@ function TaxConversionPage() {
                                         </div>
                                         <div className="img-row">
                                             <div className="imgContainer auto">
-                                                <img src="images/tax_step_5_1.png" alt="Tax step 5 - 1" className="img-h150" />
+                                                <img src={`${baseUrl}images/tax_step_5_1.png`} alt="Tax step 5 - 1" className="img-h150" />
                                             </div>
                                             <div className="imgContainer auto">
-                                                <img src="images/tax_step_5_2.png" alt="Tax step 5 - 2" className="img-h150" />
+                                                <img src={`${baseUrl}images/tax_step_5_2.png`} alt="Tax step 5 - 2" className="img-h150" />
                                             </div>
                                             <div className="imgContainer auto">
-                                                <img src="images/tax_step_5_3.png" alt="Tax step 5 - 3" className="img-h150" />
+                                                <img src={`${baseUrl}images/tax_step_5_3.png`} alt="Tax step 5 - 3" className="img-h150" />
                                             </div>
                                         </div>
                                     </li>
@@ -153,7 +154,7 @@ function TaxConversionPage() {
                                     左側邊欄選擇檔案，並上傳。
                                 </div>
                                 <div className="imgContainer auto-mt">
-                                    <img src="images/tax_step_3_upload.png" alt="Upload file sidebar" className="img-h200" />
+                                    <img src={`${baseUrl}images/tax_step_3_upload.png`} alt="Upload file sidebar" className="img-h200" />
                                 </div>
                             </li>
                             <li>
@@ -162,7 +163,7 @@ function TaxConversionPage() {
                                     上傳完成後，頁面會顯示檔案內容，可點擊右上角「下載進項發票媒體檔(.txt)」按鈕，下載檔案。
                                 </div>
                                 <div className="imgContainer auto-mt">
-                                    <img src="images/tax_step_4_download.png" alt="Download file button" className="img-responsive" />
+                                    <img src={`${baseUrl}images/tax_step_4_download.png`} alt="Download file button" className="img-responsive" />
                                 </div>
                             </li>
                             <li>
@@ -172,15 +173,12 @@ function TaxConversionPage() {
                                 </div>
                                 <div className="img-row-wrap">
                                     <div className="imgContainer half">
-                                        <img src="images/tax_step_5_import_menu.png" alt="Import menu" className="img-full" />
+                                        <img src={`${baseUrl}images/tax_step_5_import_menu.png`} alt="Import menu" className="img-full" />
                                     </div>
                                     <div className="imgContainer half">
-                                        <img src="images/tax_step_5_import_dialog.png" alt="Import dialog" className="img-full" />
+                                        <img src={`${baseUrl}images/tax_step_5_import_dialog.png`} alt="Import dialog" className="img-full" />
                                     </div>
                                 </div>
-                            </li>
-                            <li>
-                                <b>請再次確認進項發票資料是否正確!</b><br />若發現任何問題，請聯繫:姚禹安<a href="mailto:a08655@taisugar.com.tw" className="link-blue"> a08655@taisugar.com.tw</a>
                             </li>
                         </ol>
                         <ScrollToTopBtn containerId="tax-instruction-container" />
